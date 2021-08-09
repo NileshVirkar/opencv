@@ -1,0 +1,83 @@
+{
+    "gammaAccess": {
+        "url": "",
+        "userName": "",
+        "password": ""
+    },
+    "repositories": [
+        {
+            "dataDir": "%WORKSPACE%/temp",
+            "repository": {
+                "uid": "4c91f2f26e13a791ba32e211d4db5fed",
+                "projectName": "opencv",
+                "languages": [
+                    "CPP"
+                ],
+                "sources": {
+                    "baseDir": "%WORKSPACE%",
+                    "exclusions": ["3rdparty"]
+                }
+            },
+            "settings": {
+                "additionalOptions": [],
+                "includePaths": []
+            },
+            "modules": {
+                "codeissues": [
+                    {
+                        "name": "gamma_cxx",
+                        "enabled": true,
+                        "config": {
+                            "rules": [],
+                            "options": []
+                        }
+                    }
+                ],
+                "unittest": [
+                    {
+                        "name": "gtest",
+                        "enabled": true,
+                        "config": {
+                            "rules": [],
+                            "options": [
+                                {
+                                    "name": "reportDir",
+                                    "type": "upload",
+                                    "value": "%WORKSPACE%/output",
+                                    "required": true
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "coverage": [
+                    {
+                        "name": "gcov",
+                        "enabled": true,
+                        "config": {
+                            "rules": [],
+                            "options": [
+                                {
+                                    "name": "reportDir",
+                                    "type": "upload",
+                                    "value": "%WORKSPACE%/output/gcov",
+                                    "required": true
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "relevance": [
+                    {
+                        "name": "relevance",
+                        "enabled": true,
+                        "config": {
+                            "rules": [],
+                            "options": []
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}
